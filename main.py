@@ -268,7 +268,7 @@ def onmessage(update,bot:ObigramClient):
         except:pass
 
         # comandos de admin
-        if 'give_prox' in msgText:
+        if '/give_prox' in msgText:
             isadmin = jdb.is_admin(username)
             if isadmin:
                 try:
@@ -282,7 +282,7 @@ def onmessage(update,bot:ObigramClient):
             else:
                 bot.sendMessage(update.message.chat.id,'❗️No tienes permiso de Administrador❗️')
             return
-        if 'give' in msgText:
+        if '/give' in msgText:
             isadmin = jdb.is_admin(username)
             if isadmin:
                 try:
@@ -358,7 +358,7 @@ def onmessage(update,bot:ObigramClient):
                 statInfo = infos.createStat(username,getUser,jdb.is_admin(username))
                 bot.sendMessage(update.message.chat.id,statInfo)
                 return
-        if '/zip' in msgText:
+        if '/zips' in msgText:
             getUser = user_info
             if getUser:
                 try:
@@ -371,7 +371,7 @@ def onmessage(update,bot:ObigramClient):
                 except:
                    bot.sendMessage(update.message.chat.id,'❗️Error en el comando❗️')    
                 return
-        if '/acc' in msgText:
+        if '/account' in msgText:
             try:
                 account = str(msgText).split(' ',2)[1].split(',')
                 user = account[0]
@@ -401,7 +401,7 @@ def onmessage(update,bot:ObigramClient):
             except:
                 bot.sendMessage(update.message.chat.id,'❗️Error en el comando❗️')
             return
-        if '/repo' in msgText:
+        if '/repoid' in msgText:
             try:
                 cmd = str(msgText).split(' ',2)
                 repoid = int(cmd[1])
@@ -469,7 +469,7 @@ def onmessage(update,bot:ObigramClient):
             except:
                 bot.sendMessage(update.message.chat.id,'❗️Error en el comando❗️')
             return
-        if '/up' in msgText:
+        if '/uptype' in msgText:
             try:
                 cmd = str(msgText).split(' ',2)
                 type = cmd[1]
@@ -638,7 +638,7 @@ def onmessage(update,bot:ObigramClient):
                 # set in debug
             #    api_id = 7386053
             #    api_hash = '78d1c032f3aa546ff5176d9ff0e7f341'
-            #    bot_token = '5206363628:AAGP-Vpv5zLqEdBMlj-ZK5CDiCpIoXDnVPg'
+            #    bot_token = '5215464007:AAGVXYhjQMeNPI2U3pEJE-gU_wdarz6Yrzg'
 
             #    chat_id = int(update.message.chat.id)
             #    message_id = int(update.message.message_id)
